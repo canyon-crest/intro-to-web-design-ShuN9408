@@ -1,69 +1,85 @@
 body{
-    background-color:rgb(0, 0, 0);
-    color:#fff;
+    background-color:#e9f4f8;
+    color:#0b2540;
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
 }
 #container{
-    width: 800px;
-    margin: 0 auto;
-    /* background-color:  */
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: #fff;
     padding: 40px;
-    border-left: #000 solid 4px;
-    border-right: #000 solid 4px;
+    border-left: 4px solid #d7eaf2;
+    border-right: 4px sold #d7eaf2;
+    box-shadow: 0 6px 18px rgba(11,37,64,0,.08);
+    border-radius: 6px;
 
 }
 h1{
-    background-color:#000000;
-    border:#fff,solid,3px;
+    background-color:#064e59;
+    color: #fff;
+    border: 3px solid rgba(255,255,255,0.15);
     border-radius: 15px;
     padding: 20px;
-    /* margin-bottom: 30px; */
     width: 80%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
 
 }
 h2{
     text-align: center;
     font-size: 1.2em;
     font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    color: #0b3a4a;
 
 }
 h3{
-    border-left: double 20px #fff;
-    border-radius: 30px;
+    border-left: double 15px #06a89a;
+    border-radius: 8px;
     padding-left: 15px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+    color:#064e59;
 
 }
 p{
     line-height: 2.2em;
+    margin-bottom: 18px;
+    color: #0b2540;
+
     img{
         float: left;
-        width: 300px;
-        border: #fff solid 3px;
-        border-radius: 15px;
+        width: 360px;
+        max-width: 50%;
+        border: #064e59 solid 3px;
+        border-radius: 12px;
         margin-right: 20px;
+        margin-bottom: 12px;
+        display: block;
     }
 }
 a:link{
-    color: aqua;
+    color: #0077b6;
     text-decoration: none;
     font-weight: bold;
     
 }
 a:visited{
-    color:aqua;
+    color:#006494;
 }
 a:active{
-    color:blue;
+    color: #003f63;
 }
 h3:hover{
-    /* border-color: */
+   opacity:0.95;
 }
 a:hover{
-    color:rgb(184,255,255);
+    color: #0aa3c2;
     text-decoration: underline;
 }
 #pic1{
@@ -75,18 +91,18 @@ a:hover{
 /* CLASS RULE */
 .highlight{
     font-weight: bold;
-    background-color: yellow;
+    background-color: #fff59a;
     padding: 3px;
     color: #000;
-    /* border-radius:15px; */
+    border-radius: 6px;
 }
 .highlight.hover{
     /* background-color: ; */
 }
 
 #p2{
-    border:#fff dotted 2px;
+    border:#064e59 dotted 2px;
     padding: 20px;
-    background-color: brown;
+    background-color: #f0efe9;
     /* Do id in html */
 }
