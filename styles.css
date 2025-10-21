@@ -5,6 +5,14 @@ body{
     margin: 0;
     line-height:1.6;
 }
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
 #container{
     /* max-width: 900px; */
     margin: 36px auto;
@@ -16,26 +24,60 @@ body{
     border-radius: 8px;
 
 }
-h1{
-    background-color:#064e59;
-    color: #fff;
-    border: 3px solid rgba(255,255,255,0.15);
-    border-radius: 15px;
-    padding: 20px;
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 24px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-sizing: border-box;
-
+h1.rain {
+  display: inline-block;
+  background-color: #064e59;
+  color: transparent; /* spans show visible letters */
+  border: 3px solid rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 20px 35px;
+  text-align: center;
+  margin: 0 auto 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 1.1;
+  overflow: visible;
 }
-h2{
-    border-left: double 15px #06a89a;
-    border-radius: 8px;
-    padding-left: 15px;
-    margin-top: 22px;
-    margin-bottom: 8px;
-    color:#064e59;
+
+/* Each letter drops in with a staggered delay */
+h1.rain .drop {
+  display: inline-block;
+  color: #ffffff;
+  transform: translateY(-160%);
+  animation: drop 1.6s ease forwards;
+  animation-delay: calc(var(--i, 0) * 0.12s);
+  padding: 0 0.04em;
+  will-change: transform, opacity;
+}
+
+/* Smooth falling effect */
+@keyframes drop {
+  0% {
+    transform: translateY(-160%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(15%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+h2 {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #064e59; 
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
 
 }
 h3{
@@ -224,5 +266,49 @@ html, body {
 @media(max-widthL 760px) {
     #sidebar { display: none; }
 }
+
+:root {
+    --bg: #e9f4f8;
+    --panel: #ffffff;
+    --accent: #064e59;
+    --accent-2: #4db8ff;
+    --muted: #7b8890;
+    --max-w: 1100px;
+    --pad: 24px;
+    --radius: 10px;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+body {
+    background: var(--bg);
+    font-family: var(--body-font);
+    color: var(--accent);
+}
+.wrap {
+    max-width: var(--max-w);
+    background: var(--panel);
+    padding: var(--pad);
+    border-radius: var(--radius);
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #4db8ff, #f078b8);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect expands underline */
+h2:hover::after {
+    width: 120px;
+}
+
+
+/* ...existing code... */
 /* If you see scrollbar, left to right, lose points */
 /* not have classtag, links different color, hover something happens, add dif side, media queries 4 seperate sizes */
