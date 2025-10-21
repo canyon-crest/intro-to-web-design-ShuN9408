@@ -30,7 +30,7 @@ h1.rain {
   color: transparent; /* spans show visible letters */
   border: 3px solid rgba(255,255,255,0.15);
   border-radius: 15px;
-  padding: 20px 35px;
+  padding: 20px 50px;
   text-align: center;
   margin: 0 auto 18px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
